@@ -1,0 +1,13 @@
+import java.util.*;
+public class set_bit {
+    public static void main(String args[]){
+        Scanner s=new Scanner(System.in);
+        System.out.println("enter the number");
+        int n = s.nextInt();
+        System.out.println("enter the position to shift");
+        int p = s.nextInt();
+        int bitmask = 1<<p;
+        int newNo = bitmask | n;
+        System.out.println("new number is:" + newNo);
+    }
+}
