@@ -1,0 +1,17 @@
+import java.util.*;
+public class get_bit {
+    public static void main(String args[]){
+        Scanner s=new Scanner(System.in);
+        System.out.println("enter the number");
+        int n = s.nextInt(); 
+        System.out.println("enter the position to shift");
+        int position = s.nextInt();
+        int bitmask = 1<<position;
+        if((bitmask & n) == 0){
+            System.out.println("bit is 0");
+        }
+        else{
+            System.out.println("bit is 1");
+        }
+    }
+}
