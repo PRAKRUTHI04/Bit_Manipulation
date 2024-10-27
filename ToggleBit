@@ -1,0 +1,20 @@
+public class ToggleBit {
+    public static int toggleBit(int n, int pos) {
+        // Create a mask with a 1 at the desired position
+        int mask = 1 << pos;
+        // Toggle the bit at the given position using XOR operation
+        return n ^ mask;
+    }
+
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        System.out.println("enter a number");
+        int n = s.nextInt(); 
+        System.out.println("enter a position to shift and toggle:");
+        int pos = s.nextInt();
+        System.out.println("Original number (binary): " + Integer.toBinaryString(n));  //function Integer.toBinaryString(n) converts an integer n to its binary string
+        int result = toggleBit(n, pos);
+        System.out.println("Number after toggling bit at position " + pos + ": " + Integer.toBinaryString(result));
+        System.out.println("Resulting number (decimal): " + result);
+    }
+}
