@@ -1,0 +1,24 @@
+import java.util.*;
+public class update_bit {
+    public static void main(String args[]){
+        Scanner s=new Scanner(System.in);
+        System.out.println("enter the number"); //5
+        int n = s.nextInt();
+        System.out.println("enter the position to shift");  //1
+        int p = s.nextInt();
+        System.out.println("enter the operation:");
+        int op = s.nextInt(); //op=1 : set operation and op=0 : clear operation  
+        int bitmask = 1<<p;
+        if(op == 1){
+            //set operation
+            int newNo = bitmask | n;
+            System.out.println("new number is:" + newNo);
+        }
+        else{
+            //clear operation
+            int notBitMask = ~(bitmask);
+            int newNo = notBitMask & n;
+            System.out.println("new number is:" + newNo);
+        }
+    }
+}
